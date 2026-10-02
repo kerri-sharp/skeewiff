@@ -11,6 +11,55 @@
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="me" href="https://mastodon.social/@Skeewiff">
 
+	<link rel="canonical" href="https://skeewiff.com/">
+
+	<!-- Link previews (Facebook, Bluesky, WhatsApp, iMessage, Slack, X etc.) -->
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Skeewiff">
+	<meta property="og:url" content="https://skeewiff.com/">
+	<meta property="og:title" content="Skeewiff – Something Like That?">
+	<meta property="og:description" content="Skeewiff – Something Like That? Out now on Jalapeno Records.">
+	<meta property="og:image" content="https://skeewiff.com/assets/img/og-image.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="Skeewiff – Something Like That? album cover">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<!-- Structured data for search engines -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "MusicGroup",
+		"name": "Skeewiff",
+		"url": "https://skeewiff.com/",
+		"logo": "https://skeewiff.com/apple-touch-icon.png",
+		"image": "https://skeewiff.com/assets/img/og-image.jpg",
+		"sameAs": [
+			"https://open.spotify.com/artist/3xL2Wrd5tv4QDsWCdl81au",
+			"https://skeewiff.bandcamp.com",
+			"https://music.apple.com/gb/artist/skeewiff/15190894",
+			"https://www.youtube.com/@skeewifftube",
+			"https://www.facebook.com/skeewiff.music",
+			"https://www.instagram.com/alex_skeewiff",
+			"https://www.tiktok.com/@skeewiff",
+			"https://bsky.app/profile/skeewiff.bsky.social",
+			"https://mastodon.social/@Skeewiff"
+		],
+		"album": {
+			"@type": "MusicAlbum",
+			"name": "Something Like That?",
+			"url": "https://skeewiff.lnk.to/SomethingLikeThat",
+			"image": "https://skeewiff.com/assets/img/cover.webp",
+			"byArtist": { "@type": "MusicGroup", "name": "Skeewiff" },
+			"recordLabel": { "@type": "Organization", "name": "Jalapeno Records", "url": "https://www.jalapenorecords.com" }
+		}
+	}
+	</script>
+
+	<!-- Archivo Expanded for the release caption, subset to just the letters it uses -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,900&amp;text=SKEWIFOMTHNGLA%3F%E2%80%A2&amp;display=swap" rel="stylesheet">
+
 	<style>
 		* {
 			box-sizing: border-box;
@@ -26,11 +75,13 @@
 			align-items: center;
 			justify-content: center;
 			gap: 24px;
-			padding: 40px 16px;
+			/* Extra top padding nudges the content down to sit centred on the
+			   black disc in the background, which is ~57% of the way down */
+			padding: calc(40px + 13vh) 16px 40px;
 			/* 40% black tint over the artwork, as on the original site */
 			background:
 				linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-				#11417c url(assets/img/bg.jpg) center top / cover no-repeat;
+				#11417c url(assets/img/bg.webp) center top / cover no-repeat;
 			font-family: Arial, sans-serif;
 		}
 
@@ -44,8 +95,49 @@
 			height: auto;
 		}
 
-		.cover {
+		.release {
 			width: 367px;
+			color: #fff;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.release-title,
+		.release-cta {
+			display: block;
+			font-family: Archivo, "Arial Black", sans-serif;
+			font-stretch: expanded;
+			text-transform: uppercase;
+			white-space: nowrap;
+		}
+
+		.release-title {
+			margin-top: 4px;
+			/* Shrinks on narrow phones so the caption never overflows */
+			font-size: min(15.5px, (100vw - 32px) / 23.6);
+			font-weight: 900;
+			letter-spacing: -0.03em;
+			line-height: 1.1;
+		}
+
+		.release-cta {
+			margin-top: 2px;
+			color: #e0a913;
+			font-size: min(9px, (100vw - 32px) / 41);
+			font-weight: 700;
+			letter-spacing: 0.55em;
+			/* Balance the trailing letter-spacing so the text stays centred */
+			margin-right: -0.55em;
+		}
+
+		.release:hover .release-cta,
+		.release:focus-visible .release-cta {
+			color: #fff;
+		}
+
+		.release:focus-visible {
+			outline: 1px solid #fff;
+			outline-offset: 4px;
 		}
 
 		.links {
@@ -105,8 +197,10 @@
 </head>
 <body>
 
-	<a href="https://skeewiff.lnk.to/SomethingLikeThat" target="_blank" rel="noopener">
-		<img class="cover" src="assets/img/cover.png" width="367" height="398" alt="Skeewiff – Something Like That? Listen here">
+	<a class="release" href="https://skeewiff.lnk.to/SomethingLikeThat" target="_blank" rel="noopener">
+		<img src="assets/img/cover.webp" width="734" height="734" alt="Skeewiff – Something Like That? album cover">
+		<span class="release-title">Skeewiff • Something Like That?</span>
+		<span class="release-cta">Listen here</span>
 	</a>
 
 	<nav class="links" aria-label="Skeewiff elsewhere">
@@ -129,7 +223,7 @@
 	</nav>
 
 	<a href="https://radio.pedigreecuts.i234.me/public/skeewiff" target="_blank" rel="noopener">
-		<img class="radio" src="assets/img/SRADIO.png" width="145" height="145" alt="Skeewiff Radio 24/7">
+		<img class="radio" src="assets/img/SRADIO.webp" width="145" height="145" alt="Skeewiff Radio 24/7">
 	</a>
 
 </body>
