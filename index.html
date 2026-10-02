@@ -1,95 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Skeewiff</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	
-	<!-- FAVICON -->
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta name="author" content="Skeewiff">
+	<meta name="description" content="Skeewiff – Something Like That? Out now on Jalapeno Records.">
+	<link rel="icon" href="favicon.ico">
 	<link rel="me" href="https://mastodon.social/@Skeewiff">
-	
-	<meta name="author" content="Skeewiff" />
-	<meta name="description" content="Skeewiff" />
-	<meta name="keywords"  content="Skeewiff, Jalapeno Records" />
 
-	<!-- GOOGLE FONTS -->
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300,200,100,800,900" rel="stylesheet" type="text/css">
-	
-	<!-- STYLESHEETS -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="assets/css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-	
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			min-height: 100dvh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 24px;
+			padding: 40px 16px;
+			/* 40% black tint over the artwork, as on the original site */
+			background:
+				linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+				#11417c url(assets/img/bg.jpg) center top / cover no-repeat;
+			font-family: Arial, sans-serif;
+		}
+
+		body > * {
+			max-width: 100%;
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		.cover {
+			width: 367px;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.links ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			list-style: none;
+		}
+
+		.links a {
+			position: relative;
+			display: inline-block;
+			margin: 8px;
+			color: #fff;
+			font-size: 11px;
+			letter-spacing: 1px;
+			line-height: 1.5;
+			text-decoration: none;
+			text-transform: uppercase;
+			text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+		}
+
+		/* Dot trio that fades in under a link on hover */
+		.links a::before {
+			content: "•";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			color: transparent;
+			text-shadow: 0 0 transparent;
+			transition: color 0.3s, text-shadow 0.3s;
+			pointer-events: none;
+		}
+
+		.links a:hover::before,
+		.links a:focus-visible::before {
+			color: #fff;
+			text-shadow: 10px 0 #fff, -10px 0 #fff;
+		}
+
+		.links a:focus-visible {
+			outline: 1px solid #fff;
+			outline-offset: 3px;
+		}
+
+		.radio {
+			width: 145px;
+		}
+	</style>
 </head>
 <body>
 
-	<!-- /Preloader -->
-	<div class="preloader">
-		<div class="status"></div>
-	</div>
-	<!-- /Preloader -->
-	
-<div id="fullpage">
-		
-	
-	
-	
-	
-	<div class="section align-center" id="section2">
-	
-		<div class="heading"><br><br><br><br><br><br><br><br>
-        <h1><a href="https://skeewiff.lnk.to/SomethingLikeThat" target="_blank"><img src="assets/img/cover.png" width="367" height="398"></a></h1>
-					</div>
-																					
-		<!-- SOCIAL ICON -->
-		<div class="col-lg-12 align-center social-icons social-effect">
-        
-            <h2><a href="https://open.spotify.com/artist/3xL2Wrd5tv4QDsWCdl81au?si=_tC96G08QoOkUVSf-MN8Ww" target="_blank"><strong>Spotify</strong></a>
-				<a href="https://skeewiff.bandcamp.com" target="_blank">Bandcamp</a>
-				<a href="https://music.apple.com/gb/artist/skeewiff/15190894" target="_blank">Apple</a>
-				<a href="https://www.youtube.com/@skeewifftube" target="_blank">Youtube</a><br>
-				
-				<a href="https://www.facebook.com/skeewiff.music" target="_blank">Facebook</a>
-				<a href="https://www.instagram.com/alex_skeewiff" target="_blank">Instagram</a>
-				<a href="https://www.tiktok.com/@skeewiff" target="_blank">Tik Tok</a>
-				<a href="https://bsky.app/profile/skeewiff.bsky.social" target="_blank">Bluesky</a><br>
+	<a href="https://skeewiff.lnk.to/SomethingLikeThat" target="_blank" rel="noopener">
+		<img class="cover" src="assets/img/cover.png" width="367" height="398" alt="Skeewiff – Something Like That? Listen here">
+	</a>
 
-            <a href="https://www.jalapenorecords.com" target="_blank">Jalapeno Records</a>
-            <a href="http://www.pedigreecuts.com" target="_blank">Pedigree cuts</a>
-		    
-            </h2>
-               
-		</div>
-<div class="heading">
-							<h2><a href="https://radio.pedigreecuts.i234.me/public/skeewiff" target="_blank"><img src="assets/img/SRADIO.png" width="145" height="145"></a> </h2>
+	<nav class="links" aria-label="Skeewiff elsewhere">
+		<ul>
+			<li><a href="https://open.spotify.com/artist/3xL2Wrd5tv4QDsWCdl81au" target="_blank" rel="noopener">Spotify</a></li>
+			<li><a href="https://skeewiff.bandcamp.com" target="_blank" rel="noopener">Bandcamp</a></li>
+			<li><a href="https://music.apple.com/gb/artist/skeewiff/15190894" target="_blank" rel="noopener">Apple</a></li>
+			<li><a href="https://www.youtube.com/@skeewifftube" target="_blank" rel="noopener">Youtube</a></li>
+		</ul>
+		<ul>
+			<li><a href="https://www.facebook.com/skeewiff.music" target="_blank" rel="noopener">Facebook</a></li>
+			<li><a href="https://www.instagram.com/alex_skeewiff" target="_blank" rel="noopener">Instagram</a></li>
+			<li><a href="https://www.tiktok.com/@skeewiff" target="_blank" rel="noopener">Tik Tok</a></li>
+			<li><a href="https://bsky.app/profile/skeewiff.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+		</ul>
+		<ul>
+			<li><a href="https://www.jalapenorecords.com" target="_blank" rel="noopener">Jalapeno Records</a></li>
+			<li><a href="https://www.universalproductionmusic.com/en-gb/discover/labels/271/pedigree-cuts" target="_blank" rel="noopener">Pedigree Cuts</a></li>
+		</ul>
+	</nav>
 
-			
-
-		</div>
-		<!-- /SOCIAL ICON -->
-	</div>
-   
-</div>	
-	
-<!-- SCRIPTS -->
-<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery-ui-1.10.4.min.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.fullPage.js"></script>
-<script type="text/javascript" src="assets/js/notifyMe.js"></script>
-<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
-<script type="text/javascript" src="assets/js/jquery.placeholder.js"></script>
-<script type="text/javascript" src="assets/js/jquery.simple-text-rotator.js"></script>
-<script type="text/javascript" src="assets/js/init.js"></script>
+	<a href="https://radio.pedigreecuts.i234.me/public/skeewiff" target="_blank" rel="noopener">
+		<img class="radio" src="assets/img/SRADIO.png" width="145" height="145" alt="Skeewiff Radio 24/7">
+	</a>
 
 </body>
-
 </html>
